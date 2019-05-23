@@ -18,7 +18,5 @@ namespace MarekDerkowski
             HourLesson = hourLesson;
             TaskQty = taskQty;
         }
-
     }
-
 }

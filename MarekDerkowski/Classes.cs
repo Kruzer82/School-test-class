@@ -22,16 +22,28 @@ namespace MarekDerkowski
 
         public bool AddStudentToClass(int studentId, string name)
         {
-            try
+            foreach (Student item in students)
             {
-                students.Add(new Student(studentId, name));
-                return true;
+                if (item.StudentId == studentId)
+                {
+                    return false;
+                }
             }
-            catch (Exception)
+            students.Add(new Student(studentId,name));
+            return true;
+        }
+
+        public bool AddStudentToClass(Student student)
+        {
+            foreach (Student item in students)
             {
-                return false;
-                throw;
+                if (item.StudentId == student.StudentId)
+                {
+                    return false;
+                }
             }
+            students.Add(new Student(student.StudentId, student.Name));
+            return true;
         }
     }
 }

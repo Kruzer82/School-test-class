@@ -10,8 +10,8 @@ namespace MarekDerkowski
 {
     public class School
     {
-        List<Classes> classes;
-        List<Student> student;
+        public List<Classes> classes { get; set; }
+        public List<Student> student { get; set; }
 
         public School()
         {
